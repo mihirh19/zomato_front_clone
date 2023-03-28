@@ -1,0 +1,584 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero__section {
+    background: url(images/heroSectionBackground.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 60vh;
+    filter: blur(5px);
+    animation: unblur 2.5s forwards;
+}
+
+@keyframes unblur {
+    to {
+        filter: blur(0px);
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 16px 48px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    color: gray;
+}
+
+.navbar__manu_container {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__manu_container .user_icon {
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: solid 2px white;
+    display: none;
+}
+
+.hero__section_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    height: calc(60vh - 60px);
+}
+
+.hero__section_logo {
+    width: 310px;
+    height: auto;
+}
+
+.hero__section_title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.hero__section_input_container {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.input_container_location,
+.input_container_search,
+.location,
+.search {
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.input_container_location {
+    width: 35%;
+    border-right: solid gray 2px;
+}
+
+.input_container_search {
+    width: 65%;
+}
+
+.hero__section_input_container .location {
+    color: rgb(198, 64, 64);
+}
+
+.hero__section_input_container .search {
+    color: black;
+}
+
+.container {
+    margin: 3rem auto;
+    width: 80%;
+}
+
+.we_offer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.we__offer_card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1.5px solid #e0e0e0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.we__offer_card:hover {
+    transform: scale(1.04);
+}
+
+.we__offer_card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.we__offer_contant {
+    padding: 10px;
+}
+
+.we__offer_contant h2 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.we__offer_contant p {
+    font-size: 15px;
+    font-weight: 350;
+}
+
+.collection h1 {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.collection .sub__head_container {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sub__head_container span:nth-child(2) {
+    color: red;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.collections_card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.collections_card_container .card {
+    height: 300px;
+    min-width: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.collections_card_container .card:hover {
+    transform: scale(1.04);
+}
+
+.card1 {
+    background-image: url(images/collection4.jpg);
+}
+
+.card2 {
+    background-image: url(images/collection2.jpg);
+}
+
+.card3 {
+    background-image: url(images/collection3.jpg);
+}
+
+.card4 {
+    background-image: url(images/item4.png);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.968) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 85%);
+}
+
+.collections_card_container .card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.get__theapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 247, 240);
+    width: 100%;
+}
+
+.get__theapp .semiContainer {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.get__theapp .semiContainer .left {
+    flex: 2;
+}
+
+.get__theapp .semiContainer .left img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.get__theapp .semiContainer .right {
+    flex: 4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.right h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.right p {
+    font-size: 1rem;
+}
+
+.semiContainer .right .radio_button_container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.semiContainer .right .radio_button_container div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.semiContainer .right .radio_button_container div input {
+    height: 15px;
+    width: 15px;
+    accent-color: red;
+}
+
+.semiContainer .input_container {
+    display: flex;
+    gap: 2rem;
+}
+
+.input_container button,
+input {
+    padding: 10px 12px;
+}
+
+.input_container input {
+    flex: auto;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 8px;
+}
+
+.input_container {
+    flex-wrap: wrap;
+}
+
+.input_container button {
+    border: none;
+    background-color: rgb(237, 33, 33);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right .download_app_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.download_app_container h5 {
+    font-weight: 500;
+    color: gray;
+    font-size: 1rem;
+}
+
+.download_app_container div {
+    display: flex;
+    gap: 1rem;
+}
+
+.download_app_container div a {
+    width: 100%;
+}
+
+.download_app_container div a img {
+    width: 75%;
+}
+
+.accordion {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.015);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion_trigger {
+    display: block;
+    padding: 13px 25px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion_trigger::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    border-top: 8px solid rgb(0, 0, 0);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+
+.Acoo {
+    border-radius: 10px;
+    border: 1.5px solid rgb(37, 37, 37);
+    outline: none;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.accordian_container {
+    display: none;
+    overflow: hidden;
+    margin: 1px 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.ac_hide {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.accordian_container p,
+ul,
+a {
+    margin: 20px;
+    text-decoration: none;
+}
+
+.ac_hide:checked+.accordian_container {
+    display: flex;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer_section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer_section1 img {
+    width: 120px;
+}
+
+.section1_buttoncontainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.section1_buttoncontainer button {
+    padding: 5px 5px;
+    width: 90px;
+    border: 1px solid gray;
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.navigation_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
+    margin: auto;
+    gap: 1rem;
+    padding: 3rem o;
+}
+
+.link_container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.link_container h5 {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px;
+}
+
+.footer_link {
+    text-decoration: none;
+    color: gray;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.footer_link:hover {
+    color: black;
+}
+
+.section_link_container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.section_link_container button {
+    background-color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_link_container button i {
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.footer_section_logo {
+    width: 100%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:600px) {
+    .navbar__manu_container .user_icon {
+        display: flex;
+    }
+    .link {
+        display: none;
+    }
+    .navbar {
+        padding: 16px;
+    }
+    .hero__section {
+        min-height: 80vh;
+    }
+    .hero__section_input_container {
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+    }
+    .input_container_location,
+    .input_container_search {
+        padding: 15px;
+        border-radius: 10px;
+        width: 95%;
+    }
+    .hero__section_container {
+        height: calc(80vh - 60px);
+    }
+    .hero__section_title {
+        font-size: 30px;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .get__theapp .semiContainer .left {
+        flex: 1;
+    }
+    .get__theapp .semiContainer .right {
+        flex: 1;
+    }
+    .get__theapp .semiContainer {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .get__theapp {
+        padding: 2.5rem;
+    }
+    .get__theapp .semiContainer {
+        width: 80%;
+        flex-direction: column;
+    }
+    .navigation_container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .navigation_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    .navigation_container {
+        grid-template-columns: 1fr;
+    }
+}
